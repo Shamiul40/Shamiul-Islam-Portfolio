@@ -10,7 +10,7 @@ const About = () => {
       id="about"
       className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
-      <div className="flex flex-col-reverse gap-20 md:flex-row justify-between items-center">
+      <div className="flex flex-col-reverse gap-5 md:flex-row justify-between items-center">
         {/* Left Side */}
         <motion.div
           className="md:w-1/2 text-center md:text-left mt-8 md:mt-0"
@@ -21,7 +21,7 @@ const About = () => {
         >
           {/* Greeting */}
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight"
+            className="text-2xl sm:text-4xl md:text-4xl font-bold text-white mb-2 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
@@ -32,7 +32,7 @@ const About = () => {
 
           {/* Name */}
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight"
+            className="text-4xl sm:text-5xl md:text-5xl font-bold text-white mb-4 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -43,7 +43,7 @@ const About = () => {
 
           {/* Skills Heading with Typing Effect */}
           <motion.h3
-            className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 leading-tight"
+            className="text-lg sm:text-2xl md:text-2xl font-semibold mb-4 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
@@ -54,7 +54,7 @@ const About = () => {
               sequence={[
                 "Frontend Developer",
                 1500,
-                "Mern Stack Developer",
+                "Mernstack Developer",
                 1500,
                 "UI/UX Designer",
                 1500,
@@ -94,7 +94,7 @@ const About = () => {
             href="https://drive.google.com/file/d/1ASOQZwg4aVx6yHVeFJ-1fJS0XOmW2pjr/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
+            className="inline-block text-white py-2 px-6 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
             style={{
               background: "linear-gradient(90deg, #8245ec, #a855f7)",
               boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
@@ -104,7 +104,7 @@ const About = () => {
             transition={{ delay: 0.9, duration: 0.4 }}
             viewport={{ once: true }}
           >
-            DOWNLOAD CV
+            Resume Download
           </motion.a>
         </motion.div>
 
@@ -121,7 +121,7 @@ const About = () => {
           }}
         >
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[28rem] md:h-[28rem] border-4 border-purple-700 rounded-full"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[25rem] md:h-[25rem] border-4 border-purple-700 rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
