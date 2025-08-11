@@ -1,4 +1,3 @@
-
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import Tilt from "react-parallax-tilt";
@@ -12,7 +11,6 @@ const About = () => {
       className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
       <div className="flex flex-col-reverse gap-20 md:flex-row justify-between items-center">
-        
         {/* Left Side */}
         <motion.div
           className="md:w-1/2 text-center md:text-left mt-8 md:mt-0"
@@ -54,10 +52,14 @@ const About = () => {
             <span className="text-white">I am a </span>
             <TypeAnimation
               sequence={[
-                "Frontend Developer", 1500,
-                "Mern Stack Developer", 1500,
-                "UI/UX Designer", 1500,
-                "Coder", 1500,
+                "Frontend Developer",
+                1500,
+                "Mern Stack Developer",
+                1500,
+                "UI/UX Designer",
+                1500,
+                "Coder",
+                1500,
               ]}
               wrapper="span"
               speed={60}
@@ -66,7 +68,7 @@ const About = () => {
                 background: "linear-gradient(90deg, #8245ec, #a855f7)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
-                fontWeight: "bold"
+                fontWeight: "bold",
               }}
               repeat={Infinity}
             />
@@ -82,9 +84,9 @@ const About = () => {
           >
             I am a frontend developer with over 6 months of experience in
             building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in frontend and other
-            modern technologies to create seamless user experiences and
-            efficient solutions.
+            back-end development, I specialize in frontend and other modern
+            technologies to create seamless user experiences and efficient
+            solutions.
           </motion.p>
 
           {/* Resume Button */}
@@ -106,13 +108,17 @@ const About = () => {
           </motion.a>
         </motion.div>
 
-        {/* Right Side */}
         <motion.div
           className="md:w-1/2 flex justify-center md:justify-end"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          animate={{
+            rotate: [0, 2, 0, -2, 0], // gentle sway effect
+            y: [0, 5, 0, -5, 0], // slight up/down sway
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           <Tilt
             className="w-48 h-48 sm:w-64 sm:h-64 md:w-[28rem] md:h-[28rem] border-4 border-purple-700 rounded-full"
@@ -123,10 +129,12 @@ const About = () => {
             transitionSpeed={1000}
             gyroscope={true}
           >
-            <img
+            <motion.img
               src={profileImage}
               alt="Shamiul Islam"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              animate={{ scale: [1, 1.03, 1] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
           </Tilt>
         </motion.div>
@@ -136,12 +144,3 @@ const About = () => {
 };
 
 export default About;
-
-
-
-
-
-
-
-
-
