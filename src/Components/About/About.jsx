@@ -1,6 +1,8 @@
+
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 import profileImage from "../../assets/profile7.png";
 
 const About = () => {
@@ -10,46 +12,83 @@ const About = () => {
       className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
       <div className="flex flex-col-reverse gap-20 md:flex-row justify-between items-center">
+        
         {/* Left Side */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+        <motion.div
+          className="md:w-1/2 text-center md:text-left mt-8 md:mt-0"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+          <motion.h1
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             Hi, I am
-          </h1>
+          </motion.h1>
+
           {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <motion.h2
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             Shamiul Islam
-          </h2>
+          </motion.h2>
+
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
+          <motion.h3
+            className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <span className="text-white">I am a </span>
             <TypeAnimation
               sequence={[
-                "Frontend Developer",
-                2000,
-                "Mern stack Developer",
-                2000,
-                "UI/UX Designer",
-                2000,
-                "Coder",
-                2000,
+                "Frontend Developer", 1500,
+                "Mern Stack Developer", 1500,
+                "UI/UX Designer", 1500,
+                "Coder", 1500,
               ]}
               wrapper="span"
-              speed={50}
-              style={{ display: "inline-block", color: "#8245ec" }}
+              speed={60}
+              style={{
+                display: "inline-block",
+                background: "linear-gradient(90deg, #8245ec, #a855f7)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontWeight: "bold"
+              }}
               repeat={Infinity}
             />
-          </h3>
+          </motion.h3>
+
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a frontend developer with over 6 month of experience in
+          <motion.p
+            className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            I am a frontend developer with over 6 months of experience in
             building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in the frontend and other
+            back-end development, I specialize in frontend and other
             modern technologies to create seamless user experiences and
             efficient solutions.
-          </p>
+          </motion.p>
+
           {/* Resume Button */}
-          <a
+          <motion.a
             href="https://drive.google.com/file/d/1ASOQZwg4aVx6yHVeFJ-1fJS0XOmW2pjr/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
@@ -58,14 +97,25 @@ const About = () => {
               background: "linear-gradient(90deg, #8245ec, #a855f7)",
               boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
             }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.9, duration: 0.4 }}
+            viewport={{ once: true }}
           >
             DOWNLOAD CV
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
+
         {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        <motion.div
+          className="md:w-1/2 flex justify-center md:justify-end"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[28rem] md:h-[28rem] border-4 border-purple-700 rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
@@ -75,14 +125,23 @@ const About = () => {
           >
             <img
               src={profileImage}
-              alt="Tarun Kaushik"
+              alt="Shamiul Islam"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </Tilt>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default About;
+
+
+
+
+
+
+
+
+
