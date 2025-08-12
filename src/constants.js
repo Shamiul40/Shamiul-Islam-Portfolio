@@ -181,7 +181,7 @@ export const SkillsInfo = [
       id: 1,
       img: bsaLogo,
       school: "Habibullah Bahar University",
-      date: "2014 - 2026",
+      date: "2014 - 2016",
       desc: "I have completed my Higher Secondary Certificate (HSC) from Habibullah Bahar University. During my time there, I focused on building a strong academic foundation in my chosen stream, developing skills in critical thinking, problem-solving, and effective communication. I actively participated in class activities, group discussions, and extracurricular events, which enhanced both my academic knowledge and personal development. My experience at Habibullah Bahar University College provided me with the discipline, dedication, and motivation to pursue higher education and achieve my career goals.",
       degree: "Higher Secondary Education - Hsc",
     },
