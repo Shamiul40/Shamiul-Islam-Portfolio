@@ -39,9 +39,9 @@ import agcLogo from './assets/company_logo/agc_logo.png';
 import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
 
 // Education Section Logo's
-import glaLogo from './assets/education_logo/gla_logo.png';
-import bsaLogo from './assets/education_logo/bsa_logo.png';
-import vpsLogo from './assets/education_logo/vps_logo.png';
+import glaLogo from './assets/education_logo/bsa-logo.png';
+import bsaLogo from './assets/education_logo/gla-logo.png';
+// import vpsLogo from './assets/education_logo/vps_logo.png';
 
 // Project Section Logo's
 import githubdetLogo from './assets/work_logo/github-det.png';
@@ -182,7 +182,7 @@ export const SkillsInfo = [
       img: bsaLogo,
       school: "Habibullah Bahar University",
       date: "2014 - 2026",
-      desc: " have completed my Higher Secondary Certificate (HSC) from Habibullah Bahar University College. During my time there, I focused on building a strong academic foundation in my chosen stream, developing skills in critical thinking, problem-solving, and effective communication. I actively participated in class activities, group discussions, and extracurricular events, which enhanced both my academic knowledge and personal development. My experience at Habibullah Bahar University College provided me with the discipline, dedication, and motivation to pursue higher education and achieve my career goals.",
+      desc: "I have completed my Higher Secondary Certificate (HSC) from Habibullah Bahar University. During my time there, I focused on building a strong academic foundation in my chosen stream, developing skills in critical thinking, problem-solving, and effective communication. I actively participated in class activities, group discussions, and extracurricular events, which enhanced both my academic knowledge and personal development. My experience at Habibullah Bahar University College provided me with the discipline, dedication, and motivation to pursue higher education and achieve my career goals.",
       degree: "Higher Secondary Education - Hsc",
     },
     // {
